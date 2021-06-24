@@ -1,0 +1,414 @@
+body{
+  background-color: #fff !important;
+  scroll-behavior: smooth;
+}
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+a:hover{
+  text-decoration: none;
+}
+img{
+  width: 100%;
+  object-fit: contain;
+}
+/* ++++++ HEADER ++++++++++ */
+
+.dev-introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.dev-introduction .logo span{
+  color: rgb(54, 147, 245);
+  font-size: 3rem;
+  font-weight: 800;
+  background: #ff8177;
+  background-image: linear-gradient(to top,#0533bf 0%, #54daff 100%);
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; 
+  -moz-text-fill-color: transparent;
+  -moz-background-clip: text;
+  
+}
+.user-persona{
+  align-self: flex-end;
+}
+
+.user-persona h6{
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #0f2872;
+  
+  letter-spacing: 6px;
+  margin-bottom: 2px;
+ 
+}
+
+.user-persona small{
+ 
+  color: #54daff;
+  letter-spacing:2px;
+  font-size: .55rem;
+  cursor: pointer;
+  
+
+}
+.user-persona small::after{
+  content: '.';
+  font-weight: 700;
+  font-size: 1.1rem;
+
+
+}
+
+
+nav ul{
+  list-style: none;
+  display: flex;
+}
+nav ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+nav ul li a{
+  color: #0f2872;
+  transition: all 0.3s ease;
+  
+}
+nav ul li a:hover{
+  color: #54daff;
+}
+
+nav ul li::after{
+  content: ' | ';
+  color: #0f2872;
+  padding: 0 20px;
+}
+nav ul li:nth-last-child(1)::after{
+  content: '';
+  padding: 0;
+
+}
+
+.relative-box{
+  position:relative;
+  
+}
+
+
+.dev-options{
+  display:none;
+  position:absolute;  
+  width: 100%;
+}
+.dev-options.show{
+  display:flex !important;
+}
+
+
+/* +++++ ABOUT PAGE ++++++++ */
+/* picture */
+.picture{
+  margin-top: 80px;
+}
+.avatar.card{
+  position: relative;
+  /* padding-top: 100px; */
+  width: 300px;
+}
+.img-container{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+  background-color: #643737;
+  margin-top: -100px;
+  
+}
+/* skills */
+.skills .title{
+  font-size: 1.4rem;
+}
+
+
+
+/* +++++++++++ PROJECTS +++++++++++ */
+.section-title{
+  font-weight: 800;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  
+ 
+}
+.section-title::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    align-self: flex-end;
+    position: relative;
+    top:-8px;
+   
+    margin-left: 10px;
+}
+
+/* projects */
+/* project-nav-links */
+.project-nav-link{
+  display: flex;
+  flex-direction: column;
+  transition: all 300ms ease;
+}
+.project-nav-link::after{
+  display: flex;
+  content: '';
+  background-color: #54daff;
+  width: 50%;
+  height: 2px;
+  transition: all 300ms ease;
+  opacity: 0;
+}
+.project-nav-link:hover::after{
+ 
+  opacity: 1;
+}
+
+
+
+.project.card{
+  flex-grow: 1;
+  max-width: 350px;
+}
+
+.project-img-container{
+  width:90%;
+  height: 150px;
+  border: #0533bf solid 1px;
+}
+
+.project-navigation{
+  background-color: #fff;
+  
+  min-width: 400px;
+  align-self: center;
+  margin: 0 auto;
+}
+
+
+/* +++++++  Sinlgle(main) Project Page ++++++ */
+.main-project-title{
+  font-weight: 700;
+}
+
+.main-project-img-container{
+  background-color: #fff;
+  width: 100%;
+  height: 250px;
+}
+
+.aspect h5{
+  font-weight: 600;
+  color: #ffffff;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.aspect h5::after{
+  
+  content: '';
+  width: 50%;
+  height: 5px;
+  margin-top: 3px;
+  background-color: #54daff;
+}
+
+.correct-btn{
+  min-width: fit-content;
+  
+  max-width: 200px;
+  
+}
+
+
+
+@media (max-width: 768px) {
+ .right{
+   border: none !important;
+   border-top: solid #fff 1px !important;
+   
+   padding: 2rem 0;
+  
+ }
+}
+
+
+
+/* ================================================================ */
+/* +++++++++++++++++++++++++++ MAIN SITE +++++++++++++++++++++++++ */
+/* ================================================================ */
+
+.main-site-header{
+  height: 100vh;
+  background-color: rgb(25, 26, 67);
+}
+
+
+.branding-elements-container{
+  position:relative;
+  /* top: -50px; */
+}
+
+.branding-elements-container .dev-introduction .logo span{
+  font-size: 7rem;
+}
+
+.branding-elements-container .user-persona{
+  align-self: center;
+}
+
+/* .branding-elements-container .user-persona h6{
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #0f2872;
+  
+  letter-spacing: 6px;
+  margin-bottom: 2px;
+ 
+}
+
+.branding-elements-container .user-persona small{
+ 
+  color: #54daff;
+  letter-spacing:2px;
+  font-size: .55rem;
+  cursor: pointer;
+  
+
+}
+.branding-elements-container .user-persona small::after{
+  content: '.';
+  font-weight: 700;
+  font-size: 1.1rem;
+
+
+} */
+
+@media (max-width: 768px) {
+  .logo{
+    line-height: 1;
+  }
+ }
+@media (min-width: 768px) {
+  nav ul li::after{
+    content: ' | ';
+    color: #0f2872;
+    padding: 0 40px;
+  }
+ }
+
+
+
+
+
+ /* HERO COPY ++++++++ */
+ .hero-copy p{
+   font-size: 1.4rem;
+   font-weight: 300;
+   max-width: 850px;
+   margin: 0 auto;
+
+ }
+
+
+
+ /* MY WORK ++++++++ */
+ .my-work {
+   background-color: #193154  ;
+ 
+
+ }
+
+ /* Utilities for sections */
+
+.py-100 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+.py-101 {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+.py-105 {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
+}
+
+/* ABOUT ME ++++++++++ */
+.about-me{
+  background-color: #0533bf;
+}
+
+
+.about-me .section-title{
+  justify-content: flex-start;
+  
+}
+
+@media (max-width: 768px) {
+  .about-me .section-title{
+    justify-content: center;
+    
+  }
+ }
+
+.about-me p{
+  font-size: 1.05rem;
+  max-width: 620px;
+}
+
+/* sklls n lngs +++++++++ */
+.skills_n_languages .section-title::after{
+  background-color: #54daff;
+}
+
+.skills_n_languages .skill{
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  
+  
+}
+.skills_n_languages .skill::before{
+  content: '';
+  width:10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #193154;
+  margin-right: 7px;
+  align-self: center;
+
+}
+
+/* contact me */
+@media (max-width: 768px) {
+  .contact-me .approach{
+    border: none !important;
+    
+
+  }
+ }
+
+
+
