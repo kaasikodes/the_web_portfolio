@@ -30,7 +30,7 @@ Route::get('/login', 'UserController@login')->name('login');
 // About Controller
 Route::get('/about','AboutController@show')->name('about.show');
 Route::get('/about/edit','AboutController@edit')->name('about.edit');
-//Route::get('/about/create','AboutController@create')->name('about.create'); Not needed since its just you
+Route::get('/about/create','AboutController@create')->name('about.create'); 
 Route::post('/about/store','AboutController@store')->name('about.store');
 Route::put('/about/update','AboutController@update')->name('about.update');
 
