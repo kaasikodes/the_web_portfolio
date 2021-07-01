@@ -29,6 +29,7 @@ Route::get('/login', 'UserController@login')->name('login');
 
 // About Controller
 Route::get('/about','AboutController@show')->name('about.show');
+Route::get('/about/index','AboutController@index')->name('about.index');
 Route::get('/about/edit','AboutController@edit')->name('about.edit');
 Route::get('/about/create','AboutController@create')->name('about.create'); 
 Route::post('/about/store','AboutController@store')->name('about.store');
