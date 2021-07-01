@@ -94,7 +94,7 @@
         <div class="picture col-lg-4 order-0 order-lg-1 d-flex justify-content-lg-end align-items-center  justify-content-center pb-5 pb-md-0">
 
             <div class="avatar card">
-                <div class="img-container mx-auto" style="background-image: url('/storage/uploads/4sl9N7LPXGY3VphrWn0DaIpDmcrDI34pQ9LMD5Be.jpg')">
+                <div class="img-container mx-auto" style="background-image: url({{asset('my_hack/isaac.jpg  ')}})">
                     
                 </div>
                 <div class="card-body">
