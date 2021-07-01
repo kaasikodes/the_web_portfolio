@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="profile_image">Choose Profile Image</label>
-                    <input type="file" name="profile_image" id="" class="form-control"> 
+                    <label for="profile_img">Choose Profile Image</label>
+                    <input type="file" name="profile_img" id="" class="form-control"> 
                 </div>
             
                 <div class="form-group">

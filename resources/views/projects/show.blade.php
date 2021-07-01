@@ -31,11 +31,12 @@
             <div class="col-md-8">
                 <div class="left">
                     {{-- picture --}}
-                    <div class="main-project-img-container mb-3">
+                    <div class="main-project-img-container mb-3 text-danger">
+                        <img src="{{asset('storage/'.$project->project_image)}}" alt="" class="img-fluid" style="width:100%">
 
                     </div>
                     {{-- description --}}
-                    <div class="main-project-description mb-4">
+                    <div class="main-project-description  my-5 mt-md-2">
                         {{$project->description}}
                     </div>
 
@@ -95,8 +96,8 @@
             </div>
             <div class="col-md-4">
                 <div class="right border-white border-left pl-md-3 d-flex justify-content-between flex-wrap align-items-start flex-md-column align-items-md-stretch">
-                    <a href="#" class="btn btn-success mb-4 correct-btn">View Project</a>
-                    <a href="#" class="btn bg-white text-primary mb-4 correct-btn">Check Code</a>
+                    <a target="_blank" href="{{$project->project_link}}" class="btn btn-success mb-4 correct-btn">View Project</a>
+                    <a target="_blank" href="{{$project->code_link}}" class="btn bg-white text-primary mb-4 correct-btn">Check Code</a>
 
                     {{-- tech stack --}}
                     <div class="approach my-5 aspect w-100">

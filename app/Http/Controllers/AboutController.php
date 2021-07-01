@@ -53,7 +53,7 @@ class AboutController extends Controller
         if ($data = $this->validateFileRequest($request)) {
             $about->update([
                 
-                'profile_image'=>$data['image']->store('mini_images','public')
+                'profile_img'=>$data['profile_img']->store('uploads','public')
             ]);
             
             
@@ -109,9 +109,9 @@ class AboutController extends Controller
         $data = $this->validateRequest($request);
        
         $about->update($data);
-        if ($about->profile_image) {
+        if ($about->profile_img) {
            
-            Storage::delete("public/$about->profile_image");
+            Storage::delete("public/$about->profile_img");
         }
         
        
@@ -122,7 +122,7 @@ class AboutController extends Controller
         if ($data = $this->validateFileRequest($request)) {
             $about->update([
                 
-                'profile_image'=>$data['image']->store('mini_images','public')
+                'profile_img'=>$data['profile_img']->store('uploads','public')
             ]);
             
             
@@ -171,11 +171,11 @@ class AboutController extends Controller
 
     private function validateFileRequest($request){
         //dd($request->hasFile('image'));
-        if ($request->hasFile('profile_image')) {
+        if ($request->hasFile('profile_img')) {
             //return 2;
             return $request->validate([
                 
-                'image'=>'file|mimes:jpeg,jpg,png|max:12000',
+                'profile_img'=>'file|mimes:jpeg,jpg,png|max:12000',
                 
     
             ]);

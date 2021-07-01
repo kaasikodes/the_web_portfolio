@@ -31,7 +31,7 @@
             <div class="mb-3 picture col-lg-4 order-0 order-lg-1 d-flex justify-content-lg-end align-items-center  justify-content-center pb-5 pb-lg-0">
 
                 <div class="avatar card">
-                    <div class="img-container mx-auto" style="background-image: url('/storage/mini_images/UjfJ2D1f9wJkdsMcdg8pSAJFKum5ORDL9M8m302S.jpg')">
+                    <div class="img-container mx-auto" style="background-image: url('{{asset('storage/'.$about->profile_img)}}')">
                         
                     </div>
                     <div class="card-body">

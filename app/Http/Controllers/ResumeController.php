@@ -124,7 +124,7 @@ class ResumeController extends Controller
     public function download(Resume $resume)
     {
         
-        return response()->download("storage/$resume->resume");
+        return response()->download("storage/$resume->resume","Isaac_Odeh_Resume");
     }
 
 

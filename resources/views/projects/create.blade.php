@@ -74,6 +74,12 @@
                     <label for="project_image">Choose Project Image</label>
                     <input type="file" name="project_image" id="" class="form-control"> 
                 </div>
+
+
+                <div class="form-group">
+                    <label for="mini_image">Choose Project Mini Image</label>
+                    <input type="file" name="mini_image" id="" class="form-control"> 
+                </div>
             
                 <div class="form-group">
                     {{Form::label('project_link', 'Project link')}}

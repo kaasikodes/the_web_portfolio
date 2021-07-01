@@ -3,8 +3,8 @@
         {{-- relevant links --}}
         <div class="relevant-links d-flex justify-content-end py-4">
             <a href="{{$contact->github_link}}" class="relevant-link text-capitalize pl-5">{{$contact->github_text}}</a>
-            <a href="{{$contact->linkedin_link}}" class="relevant-link text-capitalize pl-5">{{$contact->linkedin_text}}</a>
-            <a href="{{$contact->twitter_link}}" class="relevant-link text-capitalize pl-5">{{$contact->twitter_text}}</a>
+            {{-- <a href="{{$contact->linkedin_link}}" class="relevant-link text-capitalize pl-5">{{$contact->linkedin_text}}</a>
+            <a href="{{$contact->twitter_link}}" class="relevant-link text-capitalize pl-5">{{$contact->twitter_text}}</a> --}}
         </div>
         {{-- main branding elements --}}
         <header class="flex-grow-1 d-flex align-items-center">
@@ -50,13 +50,13 @@
                 <nav class="row py-4 py-md-0">
                     <ul class="col-12 d-flex justify-content-center">
                         <li>
-                            <a href="{{route('about.show')}}">About</a>
+                            <a href="{{Auth::user() ? route('about.show') : '#about'}}">About</a>
                         </li>
                         <li>
-                            <a href="{{route('projects.index')}}">Projects</a>
+                            <a href="{{Auth::user() ? route('projects.index') : '#projects'}}">Projects</a>
                         </li>
                         <li>
-                            <a href="{{route('contact.index')}}">Contact</a>
+                            <a href="{{Auth::user() ? route('contact.index') : '#contact'}}">Contact</a>
                         </li>
                         <li>
                             {{-- make it sso depending on wether u or any other viewer it downloads or shows the index page --}}

@@ -11,7 +11,7 @@
 
 
 {{-- my work --}}
-    <div class="my-work py-100">
+    <div class="my-work py-100" id="projects">
         <div class="container py-5 px-md-5">
             
             {{-- heading addded a mt5 to give proper spacing n pt3--}}
@@ -37,7 +37,7 @@
               @foreach ($projects as $project)
                   <div class="col-md-4 col-lg-3 d-flex justify-content-center mb-5">
                     <div class="project card d-flex flex-column align-items-center py-2 px-2">
-                      <div class="project-img-container">
+                      <div class="project-img-container" style="background-image: url('{{asset('storage/'.$project->mini_image)}}')">
     
                       </div>
     
@@ -72,7 +72,7 @@
     </div>
 
 {{-- about me --}}
-    <div class="about-me py-105 d-flex align-items-center justify-content-center">
+    <div class="about-me py-105 d-flex align-items-center justify-content-center" id="about">
       <div class="container">
        
 
@@ -94,7 +94,7 @@
         <div class="picture col-lg-4 order-0 order-lg-1 d-flex justify-content-lg-end align-items-center  justify-content-center pb-5 pb-md-0">
 
             <div class="avatar card">
-                <div class="img-container mx-auto" style="background-image: url('/storage/mini_images/UjfJ2D1f9wJkdsMcdg8pSAJFKum5ORDL9M8m302S.jpg')">
+                <div class="img-container mx-auto" style="background-image: url('{{asset('storage/'.$about->profile_img)}}')">
                     
                 </div>
                 <div class="card-body">
@@ -140,7 +140,7 @@
   </div>
 
 {{-- contact me --}}
-<div class="contact-me py-105 bg-primary">  
+<div class="contact-me py-105 bg-primary" id="contact">  
   <div class="container">
     <h2 class="text-white section-title mb-5 pb-2">Contact Me</h2>
     <div class="row mt-4">

@@ -86,8 +86,8 @@ class ProjectsController extends Controller
         if ($data = $this->validateFileRequest($request)) {
             $project->update([
                 
-                'mini_image'=>$data['image']->store('mini_images','public'),
-                'project_image'=>$data['image']->store('project_images','public')
+                'mini_image'=>$request->hasFile('mini_image')  ? $data['mini_image']->store('mini_images','public'): '',
+                'project_image'=>$request->hasFile('project_image')  ? $data['project_image']->store('project_images','public') : ''
             ]);
             
             
@@ -143,17 +143,18 @@ class ProjectsController extends Controller
                   
 
         //add profile image if available
-        //dd( $this->validateFileRequest($request));
+        // dd( $this->validateFileRequest($request));
         if ($data = $this->validateFileRequest($request)) {
-            if ($about->profile_image) {// if profile image is available then mini will be to cos its created from it
+            
+            if ($project->project_image) {// if profile image is available then mini will be to cos its created from it
            
-                Storage::delete("public/$about->project_image");
-                Storage::delete("public/$about->mini_image");
+                Storage::delete("public/$project->project_image");
+                Storage::delete("public/$project->mini_image");
             }
             $project->update([
                 
-                'mini_image'=>$data['image']->store('mini_images','public'),
-                'project_image'=>$data['image']->store('project_images','public')
+                'mini_image'=>$request->hasFile('mini_image')  ? $data['mini_image']->store('mini_images','public'): $project->mini_image,
+                'project_image'=>$request->hasFile('project_image')  ? $data['project_image']->store('project_images','public') : $project->project_image
             ]);
             
             
@@ -212,12 +213,13 @@ class ProjectsController extends Controller
 
 
     private function validateFileRequest($request){
-        //dd($request->hasFile('image'));
-        if ($request->hasFile('profile_image')) {
+        //dd($request->hasFile('mini_image'));
+        if ($request->hasFile('project_image') || $request->hasFile('mini_image')) {
             //return 2;
             return $request->validate([
                 
-                'image'=>'file|mimes:jpeg,jpg,png|max:12000',
+               'project_image'=>'file|mimes:jpeg,jpg,png|max:12000',
+               'mini_image'=>'file|mimes:jpeg,jpg,png|max:12000',
                 
     
             ]);
