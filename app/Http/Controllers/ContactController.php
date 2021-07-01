@@ -19,7 +19,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contact = Contact::find(1);
+        $contact =  Contact::first();
         return view('contact.index',compact('contact'));
     }
 
@@ -66,7 +66,7 @@ class ContactController extends Controller
     public function edit($id)
     {
         
-        $contact = Contact::find(1);
+        $contact = Contact::first();
         return view('contact.edit',compact('contact'));
     }
 
