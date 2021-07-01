@@ -21,7 +21,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        return About::all();
+        return About::first();
     }
 
     /**
@@ -74,7 +74,7 @@ class AboutController extends Controller
      */
     public function show()
     {
-        $about = About::find(1);
+        $about = About::first();
      
         
         
@@ -93,7 +93,7 @@ class AboutController extends Controller
      */
     public function edit()
     {
-        $about = About::find(1);
+        $about = About::first();
 
         return view('about.edit',compact('about'));
     }
@@ -107,7 +107,7 @@ class AboutController extends Controller
      */
     public function update(Request $request)
     {
-        $about = About::find(1);
+        $about = About::first();
         $data = $this->validateRequest($request);
        
         $about->update($data);
