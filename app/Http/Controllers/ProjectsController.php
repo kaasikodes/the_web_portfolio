@@ -203,6 +203,8 @@ class ProjectsController extends Controller
             'tech_stack'=>'required',
             'project_link'=>'',
             'code_link'=>'',
+            'img_text'=>'',
+            'mini_img_text'=>''
             
 
         ]);

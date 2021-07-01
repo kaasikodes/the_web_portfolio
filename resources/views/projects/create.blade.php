@@ -89,6 +89,17 @@
                     {{Form::label('code_link', 'Code link')}}
                     {{Form::text('code_link','' ,['class'=>'form-control','placeholder'=>'Code link'])}}
                 </div>
+
+                <hr>
+                <h4 class="mt-4 mb-4 text-light">Optionals</h4>
+                <div class="form-group">
+                    {{Form::label('img_text', 'Image Text')}}
+                    {{Form::text('img_text', '',['class'=>'form-control','placeholder'=>'Image Text'])}}
+                </div>
+                <div class="form-group">
+                    {{Form::label('mini_img_text', 'Image Text')}}
+                    {{Form::text('mini_img_text', '',['class'=>'form-control','placeholder'=>'Mini Image Text'])}}
+                </div>
     
                 
     

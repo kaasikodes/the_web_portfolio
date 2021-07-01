@@ -24,6 +24,7 @@
         
         @include('inc.messages')
         <h1 class="mb-4 mt-5 py-2 main-project-title text-bold">{{$project->title}}</h1>
+      
         <div class="main-info row pb-4">
             {{-- content --}}
             
@@ -32,7 +33,7 @@
                 <div class="left">
                     {{-- picture --}}
                     <div class="main-project-img-container mb-3 text-danger">
-                        <img src="{{asset('storage/'.$project->project_image)}}" alt="" class="img-fluid" style="width:100%">
+                        <img src="{{asset('my_hack/'.$project->img_text)}}" alt="" class="img-fluid" style="width:100%">
 
                     </div>
                     {{-- description --}}

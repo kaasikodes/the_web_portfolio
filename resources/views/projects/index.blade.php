@@ -33,7 +33,7 @@
           @foreach ($projects as $project)
               <div class="col-md-4 col-lg-3 d-flex justify-content-center mb-4">
                 <div class="project card d-flex flex-column align-items-center py-2 px-2">
-                  <div class="project-img-container" style="background-image: url('{{asset('storage/'.$project->mini_image)}}')">
+                  <div class="project-img-container" style="background-image: url('{{asset('my_hack/'.$project->mini_img_text)}}')">
                     
 
                   </div>
