@@ -12,10 +12,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $about = About::find(1);
+        $about = About::first();
         // format the skills to an array
         $about->skills = $this->convertToArray($about->skills);
-        $contact = Contact::find(1);
+        $contact = Contact::first();
         $projects = Project::all();
         return view('index',compact('about','contact','projects'));
     }
