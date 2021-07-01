@@ -45,6 +45,7 @@ class AboutController extends Controller
         $data = $this->validateRequest($request);
        
         $about = About::create($data);
+        dd($about);
        
                   
 
@@ -74,6 +75,7 @@ class AboutController extends Controller
     public function show()
     {
         $about = About::find(1);
+     
         
         
         
