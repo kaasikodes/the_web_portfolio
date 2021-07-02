@@ -142,22 +142,24 @@
 {{-- contact me --}}
 <div class="contact-me py-105 bg-primary" id="contact">  
   <div class="container">
+    
     <h2 class="text-white section-title mb-5 pb-2">Contact Me</h2>
+    <div class="thanks"></div>
     <div class="row mt-4">
       <div class="col-md-8 col-12">
-        <form action="" method="post">
+        <form action="/api/messages/create" method="post" id="message-form">
           <div class="form-group">
-            <input type="text" name="name" id="" class="form-control" placeholder="Name">
+            <input type="text" name="name" id="name" class="form-control" placeholder="Name">
 
           </div>
 
           <div class="form-group">
-            <input type="email" name="email" id=""class="form-control" placeholder="Email">
+            <input type="email" name="email" id="email"class="form-control" placeholder="Email">
 
           </div>
 
           <div class="form-group">
-            <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+            <textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
           </div>
 
           <button class="btn btn-success">Hit me up</button>

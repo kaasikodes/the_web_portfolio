@@ -1,5 +1,105 @@
 $(document).ready(function () {
 
+    $('#message-form').submit(function (e) {
+        e.preventDefault();
+        // Check for a more efficient way to grab the content of the form w
+        // without individually selecting them by id 
+        let name = $('#name').val();
+        
+        let email = $('#email').val();
+        let message = $('#message').val();
+        let url = $(this).attr('action');
+
+        $.post(url,{
+            name,
+            email,
+            message
+        }).done(function (data) {
+            console.log(data.data)
+            $('.thanks').html(
+                `
+                <div class="py-2">
+                    
+                    <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        Thank you, ${data.data.name}. I'll get back to you ASAP.
+                    
+                
+                    </div>
+                        
+                   
+
+                </div>
+                
+                `
+            )
+            
+            
+        }).fail(function (xhr, status, error) {
+
+            console.log('errors',error)
+            console.log(xhr.responseText)
+            let errors = JSON.parse(xhr.responseText).errors;
+            $('.thanks').empty();
+            
+            
+            errors.name &&  $('.thanks').append(
+                `
+                <div class="pb-2">
+                    
+                    <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        ${errors?.name[0]}
+                    
+                
+                    </div>
+                        
+                   
+
+                </div>
+                `
+            )
+            
+            errors.email &&  $('.thanks').append(
+                `
+                <div class="pb-2">
+                    
+                    <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        ${errors?.email[0]}
+                    
+                
+                    </div>
+                        
+                   
+
+                </div>
+                `
+            )
+            
+            errors.message &&  $('.thanks').append(
+                `
+                <div class="pb-2">
+                    
+                    <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        ${errors?.message[0]}
+                    
+                
+                    </div>
+                        
+                   
+
+                </div>
+                `
+            )
+            
+        })
+
+        
+    })
+
+
     
     // Functionality for the Developer Navigation
     $('#dev_options_btn').click(()=>{

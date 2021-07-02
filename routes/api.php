@@ -37,3 +37,7 @@ Route::get('projects/{category}', 'ProjectsController@fetchCategory');
 
 // This is a fix for the developer projects page
 Route::get('projects/projects/{category}', 'ProjectsController@fetchCategory');
+
+
+// messages
+Route::post('messages/create','MessagesController@store');

@@ -46,3 +46,8 @@ Route::resource('contact',ContactController::class);
 Route::resource('resume',ResumeController::class);
 Route::get('resume/{resume}/download','ResumeController@download')->name('resume.download');
 
+// Messages Controller
+Route::resource('messages',MessagesController::class);
+
+
+
