@@ -37,8 +37,7 @@ $(document).ready(function () {
             
         }).fail(function (xhr, status, error) {
 
-            console.log('errors',error)
-            console.log(xhr.responseText)
+          
             let errors = JSON.parse(xhr.responseText).errors;
             $('.thanks').empty();
             
