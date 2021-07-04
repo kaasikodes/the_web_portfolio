@@ -122,7 +122,7 @@ $(document).ready(function () {
 
             $('#projects-container').empty(); //consider using ajax so this is only set empty once a reponse is recived
             
-            $.each(data.data, (i, {progress_status,project_image,id,title})=>{
+            $.each(data.data, (i, {progress_status,mini_img_text,id,title})=>{
 
                 // deal with project image l8r
 
@@ -132,7 +132,7 @@ $(document).ready(function () {
 
                     <div class="col-md-4 col-lg-3 d-flex justify-content-center mb-5">
                         <div class="project card d-flex flex-column align-items-center py-2 px-2">
-                        <div class="project-img-container">
+                        <div class="project-img-container" style="background-image: url('my_hack/${mini_img_text}')">
         
                         </div>
         
