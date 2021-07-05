@@ -109,7 +109,7 @@ $(document).ready(function () {
 
 
     // Functionality for projects navigation
-    console.log("still works fdfd wew")
+    //console.log("Widow",window.location.href.includes("http://127.0.0.1:8000/projects") )
     $('.project-nav-link').click((e)=>{
         console.log("anser",e.currentTarget.attributes['href'].value)
         e.preventDefault();
@@ -125,8 +125,9 @@ $(document).ready(function () {
             $.each(data.data, (i, {progress_status,mini_img_text,id,title})=>{
 
                 // deal with project image l8r
-
-                let projectUrl = `/projects/${id}`;
+                let baseUrl = "http://the-web-portfolio.herokuapp.com/";
+                let projectUrl = window.location.href.includes(baseUrl) ? `${baseUrl}projects/${id}`: `projects/${id}`;
+                
                 console.log('The text',mini_img_text)
 
                 $('#projects-container').append(`
