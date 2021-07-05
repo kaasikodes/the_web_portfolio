@@ -23,7 +23,8 @@ class MessagesController extends Controller
      */
     public function index()
     {
-        return Message::all();
+        $messages = Message::all();
+        return view('messages.index',compact('messages'));
     }
 
     /**
@@ -57,7 +58,7 @@ class MessagesController extends Controller
      */
     public function show($id)
     {
-        //
+        dd('show');
     }
 
     /**
@@ -89,9 +90,11 @@ class MessagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Message $message)
     {
-        //
+        // dd('reahe');
+        $message->delete();
+        return redirect('/messages')->with('success',"$message->name's message has been deleted successfully!");
     }
 
 

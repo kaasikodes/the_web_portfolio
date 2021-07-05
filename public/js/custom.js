@@ -127,6 +127,7 @@ $(document).ready(function () {
                 // deal with project image l8r
 
                 let projectUrl = `/projects/${id}`;
+                console.log('The text',mini_img_text)
 
                 $('#projects-container').append(`
 

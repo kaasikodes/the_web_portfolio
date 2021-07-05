@@ -25,6 +25,7 @@
                             @auth
                                 <div class="dev-options flex-column bg-light px-3 py-2">
                                     <a href="/about" class="dev-option">Developer Version</a>
+                                    <a href="{{route('messages.index')}}" class="dev-option">Messages</a>
                                     <a class="dev-option" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">

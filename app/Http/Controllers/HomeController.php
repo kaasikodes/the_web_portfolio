@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\About;
 use App\Contact;
 use App\Project;
+use App\Message;
 
 
 class HomeController extends Controller

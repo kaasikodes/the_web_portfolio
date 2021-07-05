@@ -17,16 +17,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// List articles
-Route::get('articles', 'ArticlesController@index');
-// List article
-Route::get('articles/{article}', 'ArticlesController@show');
-//create article
-Route::post('article', 'ArticlesController@store');
-//store article
-Route::put('article', 'ArticlesController@store');
-//delete article
-Route::delete('article', 'ArticlesController@destroy');
+// // List articles
+// Route::get('articles', 'ArticlesController@index');
+// // List article
+// Route::get('articles/{article}', 'ArticlesController@show');
+// //create article
+// Route::post('article', 'ArticlesController@store');
+// //store article
+// Route::put('article', 'ArticlesController@store');
+// //delete article
+// Route::delete('article', 'ArticlesController@destroy');
 
 Route::view('test','test');
 
